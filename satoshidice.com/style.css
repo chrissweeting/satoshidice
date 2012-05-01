@@ -1,0 +1,10 @@
+body {background-color:fbfbfb; font-family: 'Trebuchet MS', Helvetica, sans-serif; font-weight: 100}
+table.data {
+  max-width:960px;
+  font-family: 'Ubuntu Mono';
+  border-collapse:collapse;
+  margin:1em 0;
+  font-size: 0.80em;
+}
+
+
