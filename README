@@ -1,0 +1,19 @@
+This repository holds the static html pages from http://SatoshiDice.com
+and also the hash keys to the secrets that are revealed after each 
+expires.
+
+The purpose of this is to have an independant archive of the
+site since the information on the site is used to for financial
+transactions which need to be verified at a later time.
+
+The only file that is really critical to have archived is the hash.keys
+and that has data through the year 2021, so it should never change.
+The file's sha1sum on May 1, 2012 is:
+ d5f03cad9c3e0e2fac85fd0ba110d41fb31a20e2
+ 
+$ sha1sum hash.keys
+d5f03cad9c3e0e2fac85fd0ba110d41fb31a20e2  hash.keys
+
+- Stephen Gornick
+  sgornick@digicoast.com
+  +1.310.356.9912
