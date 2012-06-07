@@ -1,7 +1,6 @@
 <HTML>
 <HEAD>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|PT+Mono|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style-jjg.css" />
 <link REL="SHORTCUT ICON" href='https://s3-eu-west-1.amazonaws.com/satoshidice/favicon.png'/>
 <TITLE>SatoshiDice BitCasino - Bits and Bets</TITLE>
 <script type="text/javascript">
@@ -30,13 +29,11 @@
 
 <p>There is thus an answering transaction for each bet and normally you see that transaction in your client after a few seconds.  </p>
 
-<H2>Multiple Bets</H2>
 
-<p>If desired, you can put multiple bets in a single transaction.  Just put in multiple outputs to as many of the bet option addresses as you want.  Each bet will be evaluated and paid.  All the bets from one transaction will have the same lucky number.</p>
 
 <H2>Delays</H2>
 
-<p>If there is a problem with the software there might be delays in processing bets or creating return transactions.  A transaction will always be evaluated with the date of when it was first seen by the software.  This means if your transaction comes in on the 1st, the software will tag the transaction with that date.  Then if the transaction fails and the program explodes, and it's not fixed until the 2nd, your transaction will still use the 1st for the purpose of lucky number selection.  </p>
+<p>If there is a problem with the software there might be delays in processing bets or creating return transactions.  A transaction will always be evaluated with the date of when it was first seen by the software.  This means if your transaction comes in on the 1st, the software will tag the transaction with that date.  Then if the transaction fails and the program explodes, and it's not fixed until the 2nd, your transaction will still use the 1st for the purpose of lucky number selection. Be sure to include the 0.0005btc fee in your bid transaction to help ensure fast response.</p>
 
 
 <H2>Problems</H2>
@@ -49,7 +46,10 @@
 Because there is only  a limited pool of funds to back bets, there is a max bet for each bet option.    The max changes periodically also  as bets are processed making what was previously a valid bet invalid as other bets are processed and paid.  In this case, the bet will be returned before evaluating for win or loss.  </p>
 <p>SatoshiDice is the best Bitcoin game in existence. The Intelligence is sure you will agree.</p>
 
-
+<H2>Transaction Fees</H2>
+<p>
+On a win or a lose a transaction fee of 0.0005 is subtracted from the payment amount.  If this makes the payment amount zero or less the payment is set to 0.00000001.  In the event that the transaction costs us more to send back to you, we pay the fee over 0.0005.
+</p>
 
 <br>
 <center>SatoshiDice Bitcoin Game - Bet Bitcoins with SatoshiDice Bitcoin gambling. Follow <a href="https://twitter.com/#!/satoshidice" target="_new">@SatoshiDice</a> on Twitter</center>

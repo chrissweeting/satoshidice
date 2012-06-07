@@ -1,7 +1,6 @@
 <HTML>
 <HEAD>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|PT+Mono|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style-jjg.css" />
 <link REL="SHORTCUT ICON" href='https://s3-eu-west-1.amazonaws.com/satoshidice/favicon.png'/>
 <TITLE>SatoshiDice BitCasino - Secrets</TITLE>
 <script type="text/javascript">
@@ -21,12 +20,10 @@
 <BODY>
 <font size="2">
 <H1>Secret Keys</H1>
-<p>In order to ensure that there is no way for the system to change the outcome of a bet, the secret keys  used in the hash are 
-decided ahead of time.  They are not released right away, since they could be used to submit selective transactions and 
-win bets unfairly.  However, the hash of the secrets is released in the following days so that users can verify that preceeding bets were provably fair.</p>
+<p>In order to ensure that there is no way for the system to change the outcome of a bet, the secret keys used are decided ahead of time.  They are not released right away, since they could be used to submit selective transactions and win bets unfairly.  However, the hash of the secrets is released.  After the secrets are release users can verify that preceeding bets were provably fair.</p>
 
 <H2>Days</H2>
-<p>Each bet transaction that comes in is assigned to the secret key of the current day when it is first processed.  In most cases this will be as soon as the transaction is broadcast on the bitcoin network.  However it could be later if the system has some problems processing or  an outage.  All times are in GMT.</p>
+<p>Each bet transaction that comes in is assigned to the secret key of the current day when it is first processed.  In most cases this will be as soon as the transaction is broadcast on the bitcoin network.  However it could be later if the system has some problems processing or an outage.  All times are in GMT.</p>
 
 <H2>Hash File</H2>
 The system has a file of all the hash keys for the next 10 years: <a href='https://s3-eu-west-1.amazonaws.com/satoshidice/hash.keys'>hash.keys</a>
@@ -35,7 +32,7 @@ This file can be verified in several ways.  The simplest is to simply download a
 
 The other way is to use a package called <a href='https://github.com/fireduck64/BitcoinTimestamp'>BitcoinTimestamp</a>.  This is something which stores a sha256 sum in the bitcoin network as a transaction.  Since this transaction goes into the block chain, it is impossible for anyone to tamper with after the fact.  
 
-<pre>
+<pre class='data'>
 $ sha256sum hash.keys
 9b0d87ac871518cfd8601aa456b58fa74c01194cfeb25e7f3eecf43759d6ccb4  hash.keys
 $ java -jar jar/BitcoinTimestamp-1.0.1.jar decode 428bcc630b00fe431623b4e1fb0f726493dc0a2ead86ace9f65cd51bc8092459
@@ -65,7 +62,7 @@ Account: OP_DUP OP_HASH160 83fdafd7a1a8f7c06ab46ce2095adf28a4d6797d OP_EQUALVERI
 <p>There the sha256 sum of the file stored in S3 and the sha256 sum stored in transaction <a href='http://blockchain.info/search?search=428bcc630b00fe431623b4e1fb0f726493dc0a2ead86ace9f65cd51bc8092459'>428bcc630b00fe431623b4e1fb0f726493dc0a2ead86ace9f65cd51bc8092459</a> match.  This shows the file has existed since the time of the transaction on 2012-04-18.</p>
 
 <p>In case you just want the hash of the file without validation:
-<pre>
+<pre class='data'>
 $ sha256sum hash.keys
 9b0d87ac871518cfd8601aa456b58fa74c01194cfeb25e7f3eecf43759d6ccb4  hash.keys
 $ sha1sum hash.keys
@@ -74,7 +71,7 @@ $ md5sum hash.keys
 15cd77530c41e4d6b1f4802b6bdd1c83  hash.keys
 </pre></p>
 <H2>Secrets</H2>
-<p>So that is all well and good for the hashes but those are just hashes, not the actual secrets used.  After a day has been over for at least 24 hours the system will release the secret used.  Then you can verify that the hash of the secret matches the published hash in the hash file.  This demonstrates that the system used the secret it promised it would use.</p>
+<p>So that is all well and good for the hashes but those are just hashes, not the actual secrets used.  After a day has been over for at least 24 hours the system will release the secret used.  Then you can verify that the hash of the secret matches the published hash in the hash file.  This demonstrates that the system used the secret it promised it would use.  A list of secrets for previous days can be found here: <a href='secretlist.php'>secret list</a></p>
 
 <H2>Lucky Number</H2>
 <p>The lucky number used to determine the winner of games is simple.  It is simply the first bytes of hmac_sha512(secert,txid).  That would be the secret string as the key and the transaction ID of your bet transaction as the data.</p>
