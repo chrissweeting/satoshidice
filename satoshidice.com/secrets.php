@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="style-jjg.css" />
+<link rel="stylesheet" type="text/css" href="style-main.css" />
 <link REL="SHORTCUT ICON" href='https://s3-eu-west-1.amazonaws.com/satoshidice/favicon.png'/>
 <TITLE>SatoshiDice BitCasino - Secrets</TITLE>
 <script type="text/javascript">

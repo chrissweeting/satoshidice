@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="style-jjg.css" />
+<link rel="stylesheet" type="text/css" href="style-main.css" />
 <link REL="SHORTCUT ICON" href='https://s3-eu-west-1.amazonaws.com/satoshidice/favicon.png'/>
 <TITLE>SatoshiDice BitCasino - Bits and Bets</TITLE>
 <script type="text/javascript">
@@ -25,7 +25,7 @@
 <p><strong>On the specifics of the system:</strong></p>
 <p>The SatoshiDice Bitcoin game operates with zero confirmations, meaning the time it takes for you to send a transaction and receive your winnings is near-instant.  Bets are evaluated as soon as the client picks up the broadcast.  This is safe   because it always builds the answering transaction with the output of your bet transaction.  This means a blockchain that does not contain your bet cannot contain the site's answer. </p>
 
-<p>You place a bet by sending bitcoins to one of the addresses listed in the bet options table.  SatoshiDice sees this, evaluates win or lose and generates a return transaction.  If you lose, the return is one half the house edge.  That means a number way lower than your bet.  If you win, your bet is multiplied by the prize multiplier and that amount is sent back.</p>
+<p>You place a bet by sending bitcoins to one of the addresses listed in the bet options table.  SatoshiDice sees this, evaluates win or lose and generates a return transaction.  If you lose, the return your bet times 0.005.  That means a number way lower than your bet.  If you win, your bet is multiplied by the prize multiplier and that amount is sent back.</p>
 
 <p>There is thus an answering transaction for each bet and normally you see that transaction in your client after a few seconds.  </p>
 

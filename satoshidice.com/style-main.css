@@ -1,0 +1,44 @@
+@import url(https://s3-eu-west-1.amazonaws.com/satoshidice/font/font.css);
+body.jjg {background-color:#f5e5d0; font-family: 'Open Sans'; font-weight: 100}
+body {background-color:#fbfbfb; font-family: 'Open Sans'; font-weight: 100; color:#555}
+
+table.data {
+  max-width:960px;
+  font-family: 'Droid Sans Mono';
+  border-collapse:collapse;
+  margin:1em 0;
+  font-size: 0.80em;
+  border: 1px solid black;
+}
+table.top {
+  font-size: 0.80em;
+  width:1050px;
+}
+
+td.data
+{
+  border: 1px solid gray;
+  background:#f8fbfc;
+
+}
+td.data_alt
+{
+  border: 1px solid gray;
+  background:#e5f1f4;
+}
+th.data
+{
+  border: 1px solid gray;
+  background:#328aa4;
+  color:#ffffff;
+}
+
+h1 { color:#ce9017;}
+h2 { color:#ce9017;}
+h3 { color:#ce9017;}
+h4 { color:#ce9017;}
+h5 { color:#ce9017;}
+li.data{ font-family: 'Droid Sans Mono';}
+li.data_small{ font-family: 'Droid Sans Mono'; font-size: 0.70em;}
+
+

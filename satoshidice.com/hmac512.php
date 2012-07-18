@@ -1,0 +1,5 @@
+<pre>php hash_hmac(
+	"sha512",
+	ffa2bae0c76cbc0a5756ccf815ecb6c528a3fe5022cd9cbb8dc51fc38e4d7f5e,
+	hidden) ->
+ 28475629dc5c1b8efcb363c260f8f8b8fda034643673b12d15bebe4b5d028867cb97de3411f58c0229d1c25f05c2f9169225b83bbc76025ca033fdcdc5f0c834</pre>
